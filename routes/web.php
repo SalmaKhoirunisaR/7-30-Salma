@@ -14,11 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Home');
+    return view('home',[
+        "title" => "Home"
+    ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
+        "title" => "About",
         "nama" => "Salma Khoirunisa Rizqiana",
         "email" => "3103120204@smktelkom-pwt.sch.id",
         "gambar" => "momon.jpg"
@@ -26,7 +29,9 @@ Route::get('/about', function () {
 });
 
 Route::get('/gallery', function () {
-    return view('Gallery');
+    return view('gallery', [
+        "title" => "Gallery"
+    ]);
 });
 
 
